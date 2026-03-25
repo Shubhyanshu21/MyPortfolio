@@ -1,0 +1,149 @@
+.achievements-section,
+.certificates-section {
+    padding: 80px 0;
+    position: relative;
+    z-index: 10;
+    background-color: var(--backgroundColor);
+}
+
+.achievements-container {
+    margin: auto;
+}
+
+.achievements-container h2 {
+    font-size: 70px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.achievements-container h2 span {
+    color: var(--accentColor);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Base Card Skeleton styling */
+.card {
+    position: relative;
+    border-radius: 20px;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 35px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(94, 234, 212, 0.4);
+    box-shadow: 0 15px 35px rgba(94, 234, 212, 0.15), 0 0 20px rgba(94, 234, 212, 0.05);
+}
+
+/* Glow Effect matching modern aesthetic */
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(1000px circle at var(--x, 50%) var(--y, 50%), rgba(94, 234, 212, 0.06), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card:hover .card-bg {
+    opacity: 1;
+}
+
+.card-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    margin-top: 0;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.card:hover h3 {
+    color: var(--accentColor);
+}
+
+.card p {
+    font-size: 16px;
+    color: #adacac;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Certificate specific styling */
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cert-header span {
+    font-size: 28px;
+    color: var(--accentColor);
+    opacity: 0;
+    transform: translate(-10px, 10px);
+    transition: opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .cert-header span {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+.cert-card .issuer {
+    color: var(--accentColor);
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cert-card .date {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+@media only screen and (max-width: 1400px) {
+    .achievements-container h2 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .achievements-container h2 {
+        font-size: 40px;
+    }
+    
+    .achievements-section,
+    .certificates-section {
+        padding: 60px 0;
+    }
+
+    .card {
+        padding: 25px;
+    }
+}

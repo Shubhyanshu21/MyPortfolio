@@ -1,0 +1,98 @@
+.techstack {
+    padding: 100px 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.techstack h2 {
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 400;
+    text-align: center;
+    background: linear-gradient(0deg, #0d9488, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.tech-categories-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tech-category-box {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tech-category-box:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 182, 193, 0.4);
+    box-shadow: 0 10px 40px rgba(255, 182, 193, 0.15);
+    transform: translateY(-5px);
+}
+
+.tech-category-box h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tech-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tech-skill-pill {
+    background: rgba(255, 255, 255, 0.1);
+    color: #eae5ec;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.tech-skill-pill:hover {
+    background: rgba(255, 182, 193, 0.2);
+    border-color: rgba(255, 182, 193, 0.6);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .techstack {
+        padding: 60px 5vw;
+    }
+    .techstack h2 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .tech-category-box {
+        padding: 20px;
+    }
+    .tech-skill-pill {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
