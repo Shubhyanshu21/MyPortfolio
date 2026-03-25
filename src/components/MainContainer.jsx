@@ -20,16 +20,24 @@ const MainContainer = ({ children }) => {
     );
 
     useEffect(() => {
+        let timeoutId;
         const resizeHandler = () => {
-            setSplitText();
-            setIsDesktopView(window.innerWidth > 1024);
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                setSplitText();
+                setIsDesktopView(window.innerWidth > 1024);
+            }, 250);
         };
-        resizeHandler();
+        // Run once on mount
+        setSplitText();
+        setIsDesktopView(window.innerWidth > 1024);
+        
         window.addEventListener("resize", resizeHandler);
         return () => {
+            clearTimeout(timeoutId);
             window.removeEventListener("resize", resizeHandler);
         };
-    }, [isDesktopView]);
+    }, []);
 
     return (
         <div className="container-main">
