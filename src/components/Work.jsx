@@ -9,6 +9,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
+        title: "Script XP - Gamified DSA Learning Platform",
+        category: "MERN Stack Gamified Learning App",
+        tools: "MongoDB, React.js, Axios, Node.js, Express.js",
+        image: "/images/scriptxp-cover.jpg",
+        description: "A gamified DSA learning platform.",
+        link: "https://github.com/Shubhyanshu21/Script-XP",
+        liveLink: "https://script-xp.vercel.app/",
+    },
+    {
+        title: "ResumePro – AI Powered Resume Builder",
+        category: "Full Stack MERN Application",
+        tools: "MongoDB, Express.js, React.js, Node.js, Socket.IO, AI APIs",
+        image: "/images/resumepro-cover.jpg",
+        description: "Developed a dynamic resume builder enabling users to generate industry-ready resumes with AI-assisted content generation. Implemented role-based dashboards with real-time communication via Socket.IO.",
+        link: "https://github.com/Shubhyanshu21/ResumePro",
+        liveLink: "https://resumepro-ai-resume-builder.vercel.app/",
+    },
+    {
         title: "SkyRoute – An Airport Route Planner",
         category: "Web Application",
         tools: "Node.js, Express.js, EJS, C++, DSA",
@@ -16,15 +34,6 @@ const projects = [
         description: "Built a high-performance web application to compute shortest routes between airports using Dijkstra’s Algorithm implemented in C++, delivering results within 2–3 seconds. Designed a responsive UI with map visualization and dark/light mode.",
         link: "https://github.com/Shubhyanshu21/SkyRoute-Airport-Planner",
         liveLink: "https://skyroute-ktfj0h6gq-shashiheres-projects.vercel.app/",
-    },
-    {
-        title: "ResumePro – AI Powered Resume Builder",
-        category: "Full Stack MERN Application",
-        tools: "MongoDB, Express.js, React.js, Node.js, Socket.IO, AI APIs",
-        image: "/images/avanza-mockup.png",
-        description: "Developed a dynamic resume builder enabling users to generate industry-ready resumes with AI-assisted content generation. Implemented role-based dashboards with real-time communication via Socket.IO.",
-        link: "https://github.com/Shubhyanshu21/ResumePro",
-        liveLink: "https://resumepro-ai-resume-builder.vercel.app/",
     },
 ];
 
